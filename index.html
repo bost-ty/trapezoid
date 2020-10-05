@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Trapezoid Calculator</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="hero">
+        <h1>trapezoid leg calculator</h1>
+        <p>
+          a small app to calculate the length of the legs of a trapezoid.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <h2 class="subhead">calculator</h2>
+
+      <div class="container">
+        <form>
+          <ul class="flex-outer">
+            <li>
+              <label for="long-base">Long base</label>
+              <input
+                type="text"
+                id="long-base"
+                placeholder="Enter the long base of your trapezoid"
+              />
+            </li>
+            <li>
+              <label for="short-base">Short base</label>
+              <input
+                type="text"
+                id="short-base"
+                placeholder="Enter the short base of your trapezoid"
+              />
+            </li>
+            <li>
+              <label for="height">Desired height</label>
+              <input
+                type="text"
+                id="height"
+                placeholder="Enter the desired height here"
+              />
+            </li>
+            <li>
+              <button type="button" class="btn-calc" id="calculate">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M17 5H7V7H17V5Z" fill="currentColor" />
+                  <path d="M7 9H9V11H7V9Z" fill="currentColor" />
+                  <path d="M9 13H7V15H9V13Z" fill="currentColor" />
+                  <path d="M7 17H9V19H7V17Z" fill="currentColor" />
+                  <path d="M13 9H11V11H13V9Z" fill="currentColor" />
+                  <path d="M11 13H13V15H11V13Z" fill="currentColor" />
+                  <path d="M13 17H11V19H13V17Z" fill="currentColor" />
+                  <path d="M15 9H17V11H15V9Z" fill="currentColor" />
+                  <path d="M17 13H15V19H17V13Z" fill="currentColor" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3 3C3 1.89543 3.89543 1 5 1H19C20.1046 1 21 1.89543 21 3V21C21 22.1046 20.1046 23 19 23H5C3.89543 23 3 22.1046 3 21V3ZM5 3H19V21H5V3Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </form>
+        <div id="info" class="display"></div>
+
+        <form>
+          <ul class="flex-outer">
+            <li>
+              <label for="output">Leg length</label>
+              <input
+                type="text"
+                id="output"
+                placeholder="Calculated leg length"
+              />
+            </li>
+          </ul>
+        </form>
+        <div class="display">
+          <h2>the math</h2>
+          <p>
+            <code>
+              x = (long - short) / 2 <br />
+              leg = sqrt(x^2 + height^2)
+            </code>
+          </p>
+          <p>
+            <code>x</code> equals <code>long base</code> minus
+            <code>short base</code>, divided by 2.
+          </p>
+        </div>
+        <div class="diagram">
+          <img
+            src="img/diagram1.svg"
+            alt="trapezoid diagram with labels for long base, short base, and height"
+          />
+        </div>
+      </div>
+    </main>
+    <script src="/trapezoid.js"></script>
+  </body>
+</html>
