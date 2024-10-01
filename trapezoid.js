@@ -1,8 +1,9 @@
 const btnCalc = document.getElementById("calculate");
+const form = document.getElementById("calculator-form");
+const info = document.getElementById("info");
+const output = document.getElementById("output");
 
-btnCalc.addEventListener("click", function () {
-	const info = document.getElementById("info");
-	const output = document.getElementById("output");
+function calculateAndRender() {
 	const long = Number.parseFloat(document.getElementById("long-base").value);
 	const short = Number.parseFloat(
 		document.getElementById("short-base").value
@@ -32,4 +33,9 @@ btnCalc.addEventListener("click", function () {
 	} else if (long == 0 || short == 0 || height == 0) {
 		info.textContent = `Please fill out all three fields above.`;
 	}
-});
+}
+
+form.onsubmit = (e) => {
+	e.preventDefault();
+	calculateAndRender();
+};
