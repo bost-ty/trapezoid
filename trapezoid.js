@@ -1,11 +1,10 @@
-let output = document.getElementById("output");
-let info = document.getElementById("info");
-let btnCalc = document.getElementById("calculate");
-
+const btnCalc = document.getElementById("calculate");
 btnCalc.addEventListener("click", function () {
-  let long = document.getElementById("long-base");
-  let short = document.getElementById("short-base");
-  let height = document.getElementById("height");
+  const info = document.getElementById("info");
+  const output = document.getElementById("output");
+  const long = document.getElementById("long-base");
+  const short = document.getElementById("short-base");
+  const height = document.getElementById("height");
 
   long = Number.parseFloat(long.value);
   short = Number.parseFloat(short.value);
