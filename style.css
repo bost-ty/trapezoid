@@ -4,10 +4,15 @@
 	margin: 0;
 }
 
+:root {
+	--white: hsl(0, 0%, 95%);
+	--greendark: hsl(178, 56%, 23%);
+}
+
 body {
-	font: normal 1rem "Tahoma", "Helvetica Neue", sans-serif;
-	background: #1a5d5b;
-	color: #f2f2f2;
+	font: normal 1rem system-ui, sans-serif;
+	background: var(--greendark);
+	color: var(--white);
 }
 
 /* Wrapping the whole gosh darn page */
@@ -48,7 +53,7 @@ header {
 	list-style-type: none;
 }
 
-.flex-outer > * {
+.flex-outer>* {
 	gap: 0.5rem;
 	display: flex;
 	flex-wrap: wrap;
@@ -64,12 +69,14 @@ header {
 
 .flex-outer input {
 	flex: 1 0 60%;
-	background: #f2f2f2;
+	background: hsl(0, 0%, 95%);
 	max-width: 100%;
 	padding: 0.5rem;
 	border: none;
 	font-size: 1rem;
 	border-radius: 0.125rem;
+	align-items: center;
+	justify-content: center;
 }
 
 .btn-calc {
@@ -83,6 +90,9 @@ header {
 	transition: all 0.1s ease-in-out;
 	transform: scale(1);
 	min-width: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .btn-calc:hover,
